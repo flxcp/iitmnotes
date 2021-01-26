@@ -1,0 +1,43 @@
+name: Compile LaTex
+
+on:
+  push:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:   
+    # This workflow contains a single job called "compile"
+  compile:
+    # The type of runner that the job will run on
+    name: Compile LaTex
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+    # Set up your github repository
+    - name: Set up Git repository
+      uses: actions/checkout@v2
+    
+    # Compile LaTex Document
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: |
+          ct.tex
+          english.tex
+          mathematics.tex
+          statistics.tex
+
+    # Move PDF Files in public folder and push to Github repo
+    - name: Update Site
+      run: source .github/scripts/git.sh
+
+    #Upload File to Artifacts
+    - name: Upload PDF File to Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: PDF Files
+        path: /home/runner/work/iitmnotes/iitmnotes/*.pdf

@@ -1,0 +1,7 @@
+{
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+        { "source": "/view-source", "destination": "https://github.com/vercel/vercel" }
+      ]
+}
