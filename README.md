@@ -1,4 +1,4 @@
-# IITM Data Science & Programming Notes &middot; ![Compile LaTex](https://github.com/abhay-ranawat/notes/workflows/Compile%20LaTex/badge.svg)
+# IITM Data Science & Programming Notes &middot; ![Compile LaTex](https://github.com/flxcp/iitmnotes/workflows/Compile%20LaTex/badge.svg)
 
 <!--[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/flxcp/iitmnotes)-->
 
